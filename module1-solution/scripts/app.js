@@ -8,7 +8,7 @@
 
   function LunchCheckController ($scope){
     $scope.message = "";
-    $scope.checkMyHungry = function () {console.log($scope.myLunch);
+    $scope.checkMyHungry = function () {
       $scope.customStyle = {};
 
       var menuLength = 0;
