@@ -8,13 +8,16 @@
 
   function LunchCheckController ($scope){
     $scope.message = "";
-    $scope.checkMyHungry = function () {
+    $scope.checkMyHungry = function () {console.log($scope.myLunch);
       $scope.customStyle = {};
+
       var menuLength = 0;
 
-      if ($scope.myLunch != undefined)
+      if ($scope.myLunch) {
         menuLength = $scope.myLunch.split(',').length;
-        $scope.customStyle.colorClass = "green";
+      }
+
+      $scope.customStyle.colorClass = "green";
 
       switch(true){
         case menuLength == 0:
