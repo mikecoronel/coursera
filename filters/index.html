@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script>
+  <script src="app.js"></script>
+  <title>FILTERS</title>
+</head>
+<body ng-app='filters'>
+  <div ng-controller='myFilters'>
+    <h1>Filters!!!</h1>
+    <input type="text" placeholder="Escribe tu nombre ..." ng-blur="convertToUpper()" ng-model="name"></input>
+    <p>{{ binary }}</p>
+    <p>Currency: {{ cost | currency }}</p>
+  </div>
+</body>
+</html>
