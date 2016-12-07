@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Factories</title>
+</head>
+<body ng-app="ShoppingListCheckOff">
+  <h1>Factories</h1>
+  <div id="buyList" ng-controller="ToBuyController as buyList">
+    <div class="titleList">
+      <label for="buyItems" ng-hide="buyList.items.length">"Everything is bought!"</label>
+      <label for="buyItems" ng-show="buyList.items.length">"To Buy"</label>
+    </div>
+    <ol id="buyItems">
+      <li ng-repeat="item in buyList.items">
+        Buy {{ item.quantity }} {{ item.name }}
+        <button ng-click="buyList.bought($index);">Bought</button>
+      </li>
+    </ol>
+  </div>
+
+  <div id="boughtList" ng-controller="AlreadyBoughtController as boughtList">
+    <div class="titleList">
+      <label for="boughtItems" ng-hide="boughtList.items.length">"Nothing bought yet"</label>
+      <label for="boughtItems" ng-show="boughtList.items.length">"Already Bought"</label>
+    </div>
+    <ol id="boughtItems">
+      <li ng-repeat="item in boughtList.items">
+        Bought {{ item.quantity }} {{ item.name }}
+      </li>
+    </ol>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <title>Digest Cycle!!!</title>
+</head>
+<body ng-app="app">
+  <div ng-controller="ctl">
+    <button ng-click="showNumberOfWatchers()">Log # of Watchers</button>
+    <div>
+      <button ng-click="countOnce()">Up Once Counter (once)</button>
+      <button ng-click="upCounter()">Increment counter</button>
+    </div>
+    <div>
+      Once Counter: {{ onceCounter }} <br>
+      Regular Counter: {{ counter }}
+    </div>
+  </div>
+</body>
+</html>

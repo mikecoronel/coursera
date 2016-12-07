@@ -1,0 +1,13 @@
+#buyList{
+  float: left;
+  width: 50%;
+}
+
+#boughtList{
+  float: right;
+  width: 50%;
+}
+
+.titleList{
+  text-indent: 20px;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <title>Filter List</title>
+</head>
+<body ng-app="app">
+  <h1>Filter List!!!</h1>
+  <div ng-controller="ctl">
+    <input type="text" ng-model="name">
+    <ul>
+      <li ng-repeat="item in nombres | filter : name">{{ $index + 1 }}: {{ item }}</li>
+    </ul>
+  </div>
+</body>
+</html>

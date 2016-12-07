@@ -1,0 +1,13 @@
+#list1{
+  float: left;
+  width: 50%;
+}
+
+#list2{
+  float: right;
+  width: 50%;
+}
+
+.error{
+  color: red;
+}
