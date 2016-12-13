@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <title>Promises</title>
+</head>
+<body ng-app="app">
+  <h1>Promises</h1>
+  <div ng-controller="controller as ctl">
+    <input type="text" ng-model="ctl.itemName" placeholder="item name">
+    <input type="text" ng-model="ctl.itemQuantity" placeholder="quantity">
+    boxes
+    <button ng-click="ctl.addItem();">Add Item</button>
+    <ol>
+      <li ng-repeat="item in ctl.items">
+        {{ item.quantity }} boxes of {{ item.name }}
+        <button ng-click="ctl.removeItem($index);">Remove Item</button>
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
